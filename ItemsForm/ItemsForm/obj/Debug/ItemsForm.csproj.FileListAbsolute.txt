@@ -1,0 +1,11 @@
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\bin\Debug\ItemsForm.exe.config
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\bin\Debug\ItemsForm.exe
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\bin\Debug\ItemsForm.pdb
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.csproj.AssemblyReference.cache
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.csproj.SuggestedBindingRedirects.cache
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.Form1.resources
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.Properties.Resources.resources
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.csproj.GenerateResource.cache
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.csproj.CoreCompileInputs.cache
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.exe
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.pdb
