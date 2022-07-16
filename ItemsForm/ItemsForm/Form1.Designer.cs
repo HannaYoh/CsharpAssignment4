@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_Number = new System.Windows.Forms.Label();
             this.lbl_Date = new System.Windows.Forms.Label();
             this.lbl_Inventory = new System.Windows.Forms.Label();
@@ -43,6 +44,10 @@
             this.txt_Quantity = new System.Windows.Forms.TextBox();
             this.txt_Price = new System.Windows.Forms.TextBox();
             this.dt_RegisteredDate = new System.Windows.Forms.DateTimePicker();
+            this.dt_displayItems = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Number
@@ -171,11 +176,27 @@
             this.dt_RegisteredDate.Size = new System.Drawing.Size(243, 22);
             this.dt_RegisteredDate.TabIndex = 14;
             // 
+            // dt_displayItems
+            // 
+            this.dt_displayItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dt_displayItems.Location = new System.Drawing.Point(484, 165);
+            this.dt_displayItems.Name = "dt_displayItems";
+            this.dt_displayItems.RowHeadersWidth = 51;
+            this.dt_displayItems.RowTemplate.Height = 24;
+            this.dt_displayItems.Size = new System.Drawing.Size(503, 258);
+            this.dt_displayItems.TabIndex = 15;
+            this.dt_displayItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(999, 450);
+            this.Controls.Add(this.dt_displayItems);
             this.Controls.Add(this.dt_RegisteredDate);
             this.Controls.Add(this.txt_Price);
             this.Controls.Add(this.txt_Quantity);
@@ -193,6 +214,8 @@
             this.Controls.Add(this.lbl_Number);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -215,6 +238,8 @@
         private System.Windows.Forms.TextBox txt_Quantity;
         private System.Windows.Forms.TextBox txt_Price;
         private System.Windows.Forms.DateTimePicker dt_RegisteredDate;
+        private System.Windows.Forms.DataGridView dt_displayItems;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 

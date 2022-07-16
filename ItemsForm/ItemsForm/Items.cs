@@ -9,6 +9,8 @@ namespace ItemsForm
 {
     internal class Items
     {
+
+       static List<Items> items = new List<Items> ();
         public int number { get; set; }
         public string date { get; set; }
         public int inventoryNumber { get; set; }
@@ -18,12 +20,17 @@ namespace ItemsForm
 
         public void save()
         {
-            MessageBox.Show($"Product added:- Number: {number}, Date: {date}, InventoryNumber: {inventoryNumber}, ItemName: {itemName}, Quantity: {quantity}, Price: {price}");
+            items.Add (this);
         }
 
-        
+        public static List<Items> getAllProducts()
+        {
+            return items;            
+        }
 
-        
+
+
+
 
     }
 }
