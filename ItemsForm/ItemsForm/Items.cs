@@ -18,6 +18,10 @@ namespace ItemsForm
         public double quantity { get; set; }
         public double price { get; set; }
 
+        public bool isAvailable { get; set; }
+
+        public string option { get; set; }
+
         public void save()
         {
             items.Add (this);

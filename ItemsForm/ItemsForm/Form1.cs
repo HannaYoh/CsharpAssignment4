@@ -13,10 +13,12 @@ namespace ItemsForm
 {
     public partial class Form1 : Form
     {
-      
-        public Form1()
+        Login loginPage = new Login();
+        public Form1(string username, Login login)
         {
             InitializeComponent();
+            lblUsername.Text = username;
+            loginPage = login;
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -47,6 +49,9 @@ namespace ItemsForm
                 item.itemName = txt_Item.Text;
                 item.quantity = Double.Parse(txt_Quantity.Text);
                 item.price = Double.Parse(txt_Price.Text);
+                item.isAvailable = chk_isAvailable.Checked;
+                item.option = groupBox1.Text;
+                
             }
             catch (Exception ex)
             {
@@ -61,6 +66,7 @@ namespace ItemsForm
             {
                 MessageBox.Show("Item not available");
             }*/
+           
 
             if (r.IsMatch(txt_Inventory.Text))
             {
@@ -69,6 +75,15 @@ namespace ItemsForm
                 dt_displayItems.DataSource = null;
                 dt_displayItems.DataSource = Items.getAllProducts();
 
+                String items = " ";
+                foreach(var itemList in chklistcheker.CheckedItems)
+                {
+                    items += itemList.ToString();
+                }
+                MessageBox.Show(items);
+
+                
+
             }
             else
             {
@@ -76,13 +91,16 @@ namespace ItemsForm
                 
             }
 
-            
-
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void lblLogout_Click(object sender, EventArgs e)
+        {
+            loginPage.Show();
         }
     }
 }

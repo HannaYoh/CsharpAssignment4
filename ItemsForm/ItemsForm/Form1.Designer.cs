@@ -46,8 +46,16 @@
             this.dt_RegisteredDate = new System.Windows.Forms.DateTimePicker();
             this.dt_displayItems = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.chklistcheker = new System.Windows.Forms.CheckedListBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbtnNo = new System.Windows.Forms.RadioButton();
+            this.rbtnYes = new System.Windows.Forms.RadioButton();
+            this.chk_isAvailable = new System.Windows.Forms.CheckBox();
+            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblLogout = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Number
@@ -71,7 +79,7 @@
             // lbl_Inventory
             // 
             this.lbl_Inventory.AutoSize = true;
-            this.lbl_Inventory.Location = new System.Drawing.Point(568, 65);
+            this.lbl_Inventory.Location = new System.Drawing.Point(536, 65);
             this.lbl_Inventory.Name = "lbl_Inventory";
             this.lbl_Inventory.Size = new System.Drawing.Size(112, 16);
             this.lbl_Inventory.TabIndex = 2;
@@ -143,7 +151,7 @@
             // 
             // txt_Inventory
             // 
-            this.txt_Inventory.Location = new System.Drawing.Point(548, 112);
+            this.txt_Inventory.Location = new System.Drawing.Point(522, 110);
             this.txt_Inventory.Name = "txt_Inventory";
             this.txt_Inventory.Size = new System.Drawing.Size(141, 22);
             this.txt_Inventory.TabIndex = 10;
@@ -179,7 +187,7 @@
             // dt_displayItems
             // 
             this.dt_displayItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dt_displayItems.Location = new System.Drawing.Point(484, 165);
+            this.dt_displayItems.Location = new System.Drawing.Point(484, 144);
             this.dt_displayItems.Name = "dt_displayItems";
             this.dt_displayItems.RowHeadersWidth = 51;
             this.dt_displayItems.RowTemplate.Height = 24;
@@ -191,11 +199,93 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // chklistcheker
+            // 
+            this.chklistcheker.FormattingEnabled = true;
+            this.chklistcheker.Items.AddRange(new object[] {
+            "Delivery",
+            "Supplied",
+            "Manufactured",
+            "Return"});
+            this.chklistcheker.Location = new System.Drawing.Point(686, 45);
+            this.chklistcheker.Name = "chklistcheker";
+            this.chklistcheker.Size = new System.Drawing.Size(120, 89);
+            this.chklistcheker.TabIndex = 17;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtnNo);
+            this.groupBox1.Controls.Add(this.rbtnYes);
+            this.groupBox1.Location = new System.Drawing.Point(812, 34);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(175, 100);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Delivery on time";
+            // 
+            // rbtnNo
+            // 
+            this.rbtnNo.AutoSize = true;
+            this.rbtnNo.Location = new System.Drawing.Point(25, 53);
+            this.rbtnNo.Name = "rbtnNo";
+            this.rbtnNo.Size = new System.Drawing.Size(46, 20);
+            this.rbtnNo.TabIndex = 1;
+            this.rbtnNo.TabStop = true;
+            this.rbtnNo.Text = "No";
+            this.rbtnNo.UseVisualStyleBackColor = true;
+            // 
+            // rbtnYes
+            // 
+            this.rbtnYes.AutoSize = true;
+            this.rbtnYes.Location = new System.Drawing.Point(25, 26);
+            this.rbtnYes.Name = "rbtnYes";
+            this.rbtnYes.Size = new System.Drawing.Size(52, 20);
+            this.rbtnYes.TabIndex = 0;
+            this.rbtnYes.TabStop = true;
+            this.rbtnYes.Text = "Yes";
+            this.rbtnYes.UseVisualStyleBackColor = true;
+            // 
+            // chk_isAvailable
+            // 
+            this.chk_isAvailable.AutoSize = true;
+            this.chk_isAvailable.Location = new System.Drawing.Point(315, 167);
+            this.chk_isAvailable.Name = "chk_isAvailable";
+            this.chk_isAvailable.Size = new System.Drawing.Size(94, 20);
+            this.chk_isAvailable.TabIndex = 19;
+            this.chk_isAvailable.Text = "Availability";
+            this.chk_isAvailable.UseVisualStyleBackColor = true;
+            // 
+            // lblUsername
+            // 
+            this.lblUsername.AutoSize = true;
+            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsername.Location = new System.Drawing.Point(66, 21);
+            this.lblUsername.Name = "lblUsername";
+            this.lblUsername.Size = new System.Drawing.Size(67, 16);
+            this.lblUsername.TabIndex = 20;
+            this.lblUsername.Text = "username";
+            // 
+            // lblLogout
+            // 
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.Location = new System.Drawing.Point(183, 21);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(44, 16);
+            this.lblLogout.TabIndex = 21;
+            this.lblLogout.Text = "logout";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 450);
+            this.Controls.Add(this.lblLogout);
+            this.Controls.Add(this.lblUsername);
+            this.Controls.Add(this.chk_isAvailable);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.chklistcheker);
             this.Controls.Add(this.dt_displayItems);
             this.Controls.Add(this.dt_RegisteredDate);
             this.Controls.Add(this.txt_Price);
@@ -216,6 +306,8 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,6 +332,13 @@
         private System.Windows.Forms.DateTimePicker dt_RegisteredDate;
         private System.Windows.Forms.DataGridView dt_displayItems;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.CheckedListBox chklistcheker;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbtnNo;
+        private System.Windows.Forms.RadioButton rbtnYes;
+        private System.Windows.Forms.CheckBox chk_isAvailable;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.Label lblUsername;
     }
 }
 
