@@ -23,7 +23,7 @@ namespace ItemsForm
             string password = txtPassword.Text;
             if (username == "admin" && password == "admin")
             {
-                Form1 home = new Form1(username, this);
+                Form1 home = new Form1();
                 home.Show();
                 Hide();
             }

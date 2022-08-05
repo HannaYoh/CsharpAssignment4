@@ -53,6 +53,9 @@
             this.chk_isAvailable = new System.Windows.Forms.CheckBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -61,7 +64,7 @@
             // lbl_Number
             // 
             this.lbl_Number.AutoSize = true;
-            this.lbl_Number.Location = new System.Drawing.Point(75, 65);
+            this.lbl_Number.Location = new System.Drawing.Point(32, 65);
             this.lbl_Number.Name = "lbl_Number";
             this.lbl_Number.Size = new System.Drawing.Size(55, 16);
             this.lbl_Number.TabIndex = 0;
@@ -88,7 +91,7 @@
             // lbl_Item
             // 
             this.lbl_Item.AutoSize = true;
-            this.lbl_Item.Location = new System.Drawing.Point(78, 176);
+            this.lbl_Item.Location = new System.Drawing.Point(41, 171);
             this.lbl_Item.Name = "lbl_Item";
             this.lbl_Item.Size = new System.Drawing.Size(32, 16);
             this.lbl_Item.TabIndex = 3;
@@ -97,7 +100,7 @@
             // lbl_Quantity
             // 
             this.lbl_Quantity.AutoSize = true;
-            this.lbl_Quantity.Location = new System.Drawing.Point(78, 272);
+            this.lbl_Quantity.Location = new System.Drawing.Point(41, 272);
             this.lbl_Quantity.Name = "lbl_Quantity";
             this.lbl_Quantity.Size = new System.Drawing.Size(55, 16);
             this.lbl_Quantity.TabIndex = 4;
@@ -106,7 +109,7 @@
             // lbl_Price
             // 
             this.lbl_Price.AutoSize = true;
-            this.lbl_Price.Location = new System.Drawing.Point(306, 272);
+            this.lbl_Price.Location = new System.Drawing.Point(189, 272);
             this.lbl_Price.Name = "lbl_Price";
             this.lbl_Price.Size = new System.Drawing.Size(38, 16);
             this.lbl_Price.TabIndex = 5;
@@ -124,7 +127,7 @@
             // 
             // btn_Reset
             // 
-            this.btn_Reset.Location = new System.Drawing.Point(228, 379);
+            this.btn_Reset.Location = new System.Drawing.Point(192, 379);
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Size = new System.Drawing.Size(75, 23);
             this.btn_Reset.TabIndex = 7;
@@ -134,7 +137,7 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(393, 379);
+            this.btn_Cancel.Location = new System.Drawing.Point(309, 379);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(75, 23);
             this.btn_Cancel.TabIndex = 8;
@@ -144,7 +147,7 @@
             // 
             // txt_Number
             // 
-            this.txt_Number.Location = new System.Drawing.Point(67, 112);
+            this.txt_Number.Location = new System.Drawing.Point(44, 112);
             this.txt_Number.Name = "txt_Number";
             this.txt_Number.Size = new System.Drawing.Size(141, 22);
             this.txt_Number.TabIndex = 9;
@@ -158,21 +161,21 @@
             // 
             // txt_Item
             // 
-            this.txt_Item.Location = new System.Drawing.Point(67, 209);
+            this.txt_Item.Location = new System.Drawing.Point(44, 213);
             this.txt_Item.Name = "txt_Item";
             this.txt_Item.Size = new System.Drawing.Size(392, 22);
             this.txt_Item.TabIndex = 11;
             // 
             // txt_Quantity
             // 
-            this.txt_Quantity.Location = new System.Drawing.Point(67, 302);
+            this.txt_Quantity.Location = new System.Drawing.Point(44, 302);
             this.txt_Quantity.Name = "txt_Quantity";
             this.txt_Quantity.Size = new System.Drawing.Size(125, 22);
             this.txt_Quantity.TabIndex = 12;
             // 
             // txt_Price
             // 
-            this.txt_Price.Location = new System.Drawing.Point(250, 302);
+            this.txt_Price.Location = new System.Drawing.Point(186, 302);
             this.txt_Price.Name = "txt_Price";
             this.txt_Price.Size = new System.Drawing.Size(130, 22);
             this.txt_Price.TabIndex = 13;
@@ -276,11 +279,40 @@
             this.lblLogout.Text = "logout";
             this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
             // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(365, 272);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(50, 16);
+            this.lblSearch.TabIndex = 22;
+            this.lblSearch.Text = "Search";
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Location = new System.Drawing.Point(334, 302);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(118, 22);
+            this.txtSearch.TabIndex = 23;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(361, 341);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.TabIndex = 24;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 450);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtSearch);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.lblUsername);
             this.Controls.Add(this.chk_isAvailable);
@@ -302,6 +334,7 @@
             this.Controls.Add(this.lbl_Inventory);
             this.Controls.Add(this.lbl_Date);
             this.Controls.Add(this.lbl_Number);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).EndInit();
@@ -339,6 +372,9 @@
         private System.Windows.Forms.CheckBox chk_isAvailable;
         private System.Windows.Forms.Label lblLogout;
         private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Label lblSearch;
     }
 }
 

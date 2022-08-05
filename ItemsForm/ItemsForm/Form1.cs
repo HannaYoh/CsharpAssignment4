@@ -14,11 +14,12 @@ namespace ItemsForm
     public partial class Form1 : Form
     {
         Login loginPage = new Login();
-        public Form1(string username, Login login)
+        Items item = new Items();
+        public Form1()
         {
             InitializeComponent();
-            lblUsername.Text = username;
-            loginPage = login;
+            //lblUsername.Text = username;
+            //loginPage = login;
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace ItemsForm
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            Items item = new Items();
+     
             Regex r = new Regex(@"^[0-9]{3}$");
 
             try
@@ -80,9 +81,7 @@ namespace ItemsForm
                 {
                     items += itemList.ToString();
                 }
-                MessageBox.Show(items);
-
-                
+                MessageBox.Show(items);              
 
             }
             else
@@ -101,6 +100,21 @@ namespace ItemsForm
         private void lblLogout_Click(object sender, EventArgs e)
         {
             loginPage.Show();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string name = txtSearch.Text;
+            var product = Items.findProducts(name);
+            if(product != null)
+            {
+                MessageBox.Show("product not found");
+            }
+            else
+            {
+                MessageBox.Show("product found");
+            }
+            
         }
     }
 }

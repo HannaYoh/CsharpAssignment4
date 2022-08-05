@@ -10,3 +10,4 @@ C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\ob
 C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.exe
 C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.pdb
 C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.Login.resources
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.MainContainer.resources

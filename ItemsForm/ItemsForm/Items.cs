@@ -32,6 +32,12 @@ namespace ItemsForm
             return items;            
         }
 
+        public static Items findProducts(string name)
+        {
+            return items.Find(p => p.itemName == name);
+            
+        }
+
 
 
 
