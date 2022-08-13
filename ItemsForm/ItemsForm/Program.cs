@@ -16,7 +16,7 @@ namespace ItemsForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainContainer());
+            Application.Run(new NewForm());
         }
     }
 }

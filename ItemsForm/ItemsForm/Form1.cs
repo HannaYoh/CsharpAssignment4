@@ -106,13 +106,18 @@ namespace ItemsForm
         {
             string name = txtSearch.Text;
             var product = Items.findProducts(name);
-            if(product != null)
+            if(product == null)
             {
                 MessageBox.Show("product not found");
             }
             else
             {
                 MessageBox.Show("product found");
+                txt_Item.Text = item.itemName;
+                txt_Number.Text = item.number.ToString();
+                txt_Inventory.Text = item.inventoryNumber.ToString();
+                txt_Quantity.Text = item.quantity.ToString();
+                txt_Price.Text = item.price.ToString();
             }
             
         }
