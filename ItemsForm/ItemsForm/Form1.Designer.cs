@@ -334,7 +334,6 @@
             this.Controls.Add(this.lbl_Inventory);
             this.Controls.Add(this.lbl_Date);
             this.Controls.Add(this.lbl_Number);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).EndInit();

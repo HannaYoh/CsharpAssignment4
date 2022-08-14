@@ -89,6 +89,8 @@ namespace ItemsForm
                 errorProvider1.SetError(txt_Inventory, "Enter valid value");
                 
             }
+            NewForm newform = new NewForm();
+            newform.Show();
 
         }
 

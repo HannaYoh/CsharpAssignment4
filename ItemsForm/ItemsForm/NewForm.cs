@@ -25,14 +25,15 @@ namespace ItemsForm
 
         private void NewForm_Load(object sender, EventArgs e)
         {
-            //flowLayoutPanel1.Controls.Clear();
+            flowLayoutPanel1.Controls.Clear();
             List<Items> items = new List<Items>();
+            
             foreach (var myItem in Items.getAllProducts())
             {
                 ProductCard card = new ProductCard();
-                //card.Title = items.itemName;
-                //card.Description = items.inventoryNumber;
-                //card.Price = items.price;
+                card.Title = myItem.itemName;
+                card.Description = myItem.inventoryNumber.ToString();
+                card.Price = myItem.price.ToString();
                 
                 flowLayoutPanel1.Controls.Add(card);
             }
