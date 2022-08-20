@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lbl_Number = new System.Windows.Forms.Label();
             this.lbl_Date = new System.Windows.Forms.Label();
             this.lbl_Inventory = new System.Windows.Forms.Label();
@@ -45,21 +46,24 @@
             this.txt_Price = new System.Windows.Forms.TextBox();
             this.dt_RegisteredDate = new System.Windows.Forms.DateTimePicker();
             this.dt_displayItems = new System.Windows.Forms.DataGridView();
-            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.chklistcheker = new System.Windows.Forms.CheckedListBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnNo = new System.Windows.Forms.RadioButton();
             this.rbtnYes = new System.Windows.Forms.RadioButton();
+            this.rbtnNo = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.chk_isAvailable = new System.Windows.Forms.CheckBox();
             this.lblUsername = new System.Windows.Forms.Label();
             this.lblLogout = new System.Windows.Forms.Label();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // lbl_Number
             // 
@@ -198,10 +202,6 @@
             this.dt_displayItems.TabIndex = 15;
             this.dt_displayItems.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // errorProvider1
-            // 
-            this.errorProvider1.ContainerControl = this;
-            // 
             // chklistcheker
             // 
             this.chklistcheker.FormattingEnabled = true;
@@ -215,16 +215,16 @@
             this.chklistcheker.Size = new System.Drawing.Size(120, 89);
             this.chklistcheker.TabIndex = 17;
             // 
-            // groupBox1
+            // rbtnYes
             // 
-            this.groupBox1.Controls.Add(this.rbtnNo);
-            this.groupBox1.Controls.Add(this.rbtnYes);
-            this.groupBox1.Location = new System.Drawing.Point(812, 34);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(175, 100);
-            this.groupBox1.TabIndex = 18;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Delivery on time";
+            this.rbtnYes.AutoSize = true;
+            this.rbtnYes.Location = new System.Drawing.Point(25, 26);
+            this.rbtnYes.Name = "rbtnYes";
+            this.rbtnYes.Size = new System.Drawing.Size(52, 20);
+            this.rbtnYes.TabIndex = 0;
+            this.rbtnYes.TabStop = true;
+            this.rbtnYes.Text = "Yes";
+            this.rbtnYes.UseVisualStyleBackColor = true;
             // 
             // rbtnNo
             // 
@@ -237,16 +237,16 @@
             this.rbtnNo.Text = "No";
             this.rbtnNo.UseVisualStyleBackColor = true;
             // 
-            // rbtnYes
+            // groupBox1
             // 
-            this.rbtnYes.AutoSize = true;
-            this.rbtnYes.Location = new System.Drawing.Point(25, 26);
-            this.rbtnYes.Name = "rbtnYes";
-            this.rbtnYes.Size = new System.Drawing.Size(52, 20);
-            this.rbtnYes.TabIndex = 0;
-            this.rbtnYes.TabStop = true;
-            this.rbtnYes.Text = "Yes";
-            this.rbtnYes.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.rbtnNo);
+            this.groupBox1.Controls.Add(this.rbtnYes);
+            this.groupBox1.Location = new System.Drawing.Point(812, 34);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(175, 100);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Delivery on time";
             // 
             // chk_isAvailable
             // 
@@ -336,8 +336,8 @@
             this.Controls.Add(this.lbl_Number);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -346,34 +346,33 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lbl_Number;
-        private System.Windows.Forms.Label lbl_Date;
-        private System.Windows.Forms.Label lbl_Inventory;
-        private System.Windows.Forms.Label lbl_Item;
-        private System.Windows.Forms.Label lbl_Quantity;
-        private System.Windows.Forms.Label lbl_Price;
-        private System.Windows.Forms.Button btn_Add;
-        private System.Windows.Forms.Button btn_Reset;
-        private System.Windows.Forms.Button btn_Cancel;
-        private System.Windows.Forms.TextBox txt_Number;
-        private System.Windows.Forms.TextBox txt_Inventory;
-        private System.Windows.Forms.TextBox txt_Item;
-        private System.Windows.Forms.TextBox txt_Quantity;
-        private System.Windows.Forms.TextBox txt_Price;
-        private System.Windows.Forms.DateTimePicker dt_RegisteredDate;
-        private System.Windows.Forms.DataGridView dt_displayItems;
         private System.Windows.Forms.ErrorProvider errorProvider1;
-        private System.Windows.Forms.CheckedListBox chklistcheker;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton rbtnNo;
-        private System.Windows.Forms.RadioButton rbtnYes;
-        private System.Windows.Forms.CheckBox chk_isAvailable;
-        private System.Windows.Forms.Label lblLogout;
-        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.CheckBox chk_isAvailable;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton rbtnNo;
+        private System.Windows.Forms.RadioButton rbtnYes;
+        private System.Windows.Forms.CheckedListBox chklistcheker;
+        private System.Windows.Forms.DataGridView dt_displayItems;
+        private System.Windows.Forms.DateTimePicker dt_RegisteredDate;
+        private System.Windows.Forms.TextBox txt_Price;
+        private System.Windows.Forms.TextBox txt_Quantity;
+        private System.Windows.Forms.TextBox txt_Item;
+        private System.Windows.Forms.TextBox txt_Inventory;
+        private System.Windows.Forms.TextBox txt_Number;
+        private System.Windows.Forms.Button btn_Cancel;
+        private System.Windows.Forms.Button btn_Reset;
+        private System.Windows.Forms.Button btn_Add;
+        private System.Windows.Forms.Label lbl_Price;
+        private System.Windows.Forms.Label lbl_Quantity;
+        private System.Windows.Forms.Label lbl_Item;
+        private System.Windows.Forms.Label lbl_Inventory;
+        private System.Windows.Forms.Label lbl_Date;
+        private System.Windows.Forms.Label lbl_Number;
     }
 }
 
