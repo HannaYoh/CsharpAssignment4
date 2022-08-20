@@ -44,5 +44,10 @@ namespace ItemsForm
         {
 
         }
+
+        private void lblPrice_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

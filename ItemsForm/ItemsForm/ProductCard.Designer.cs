@@ -39,9 +39,9 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(94, 45);
+            this.lblTitle.Location = new System.Drawing.Point(115, 45);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(87, 39);
+            this.lblTitle.Size = new System.Drawing.Size(83, 38);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Title";
             this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
@@ -67,11 +67,12 @@
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(143, 160);
+            this.lblPrice.Location = new System.Drawing.Point(139, 160);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(38, 16);
             this.lblPrice.TabIndex = 3;
             this.lblPrice.Text = "Price";
+            this.lblPrice.Click += new System.EventHandler(this.lblPrice_Click);
             // 
             // lblDollarSign
             // 

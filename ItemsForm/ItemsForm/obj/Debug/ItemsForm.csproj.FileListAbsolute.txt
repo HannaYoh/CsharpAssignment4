@@ -14,3 +14,5 @@ C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\ob
 C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.ProductCard.resources
 C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.NewForm.resources
 C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.DockForm.resources
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.Form2.resources
+C:\Users\hanyo\source\repos\Assignment4\CsharpAssignment4\ItemsForm\ItemsForm\obj\Debug\ItemsForm.DetailPage.resources

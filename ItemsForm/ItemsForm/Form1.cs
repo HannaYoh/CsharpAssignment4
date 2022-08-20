@@ -89,7 +89,11 @@ namespace ItemsForm
                 errorProvider1.SetError(txt_Inventory, "Enter valid value");
                 
             }
-            NewForm newform = new NewForm();
+                string name = txt_Item.Text;
+               int invNum = int.Parse(txt_Inventory.Text);
+               double price = Double.Parse(txt_Price.Text);
+                double quantity = Double.Parse(txt_Quantity.Text);
+            NewForm newform = new NewForm(name, invNum, price, quantity);
             newform.Show();
 
         }
