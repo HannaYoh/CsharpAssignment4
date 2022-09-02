@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnCheck.Designer.cs">
+      <DependentUpon>ConnCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetailPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ConnCheck.resx">
+      <DependentUpon>ConnCheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetailPage.resx">
       <DependentUpon>DetailPage.cs</DependentUpon>
     </EmbeddedResource>

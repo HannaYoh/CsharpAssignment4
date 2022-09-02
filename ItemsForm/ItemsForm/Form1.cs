@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
+
 
 namespace ItemsForm
 {
     public partial class Form1 : Form
     {
+        public string conString = "Data Source=HANNA\\SQLEXPRESS;Initial Catalog=productdb;Integrated Security=True";
+
         Login loginPage = new Login();
         Items item = new Items();
         public Form1()
@@ -52,8 +56,14 @@ namespace ItemsForm
                 item.price = Double.Parse(txt_Price.Text);
                 item.isAvailable = chk_isAvailable.Checked;
                 item.option = groupBox1.Text;
-                
-            }
+                SqlConnection con = new SqlConnection(conString);
+                con.Open();
+                MessageBox.Show("connected successfully");
+                string stmt = "insert into product values ('" + item.number + "', '" + item.date + "', '" + item.inventoryNumber + "', '" + item.itemName + "', '" + item.quantity + "', '" + item.price + "' )";
+                SqlCommand comd = new SqlCommand(stmt, con);
+                var result = comd.ExecuteNonQuery();
+                MessageBox.Show(result.ToString());
+    }
             catch (Exception ex)
             {
                 MessageBox.Show("Error " + ex.Message);
@@ -89,10 +99,10 @@ namespace ItemsForm
                 errorProvider1.SetError(txt_Inventory, "Enter valid value");
                 
             }
-                string name = txt_Item.Text;
-               int invNum = int.Parse(txt_Inventory.Text);
-               double price = Double.Parse(txt_Price.Text);
-                double quantity = Double.Parse(txt_Quantity.Text);
+            string name = txt_Item.Text;
+            int invNum = int.Parse(txt_Inventory.Text);
+            double price = Double.Parse(txt_Price.Text);
+            double quantity = Double.Parse(txt_Quantity.Text);
             NewForm newform = new NewForm(name, invNum, price, quantity);
             newform.Show();
 
