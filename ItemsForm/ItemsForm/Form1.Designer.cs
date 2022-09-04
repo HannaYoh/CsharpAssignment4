@@ -56,6 +56,7 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
+            this.btnViewProduct = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dt_displayItems)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -305,11 +306,22 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // btnViewProduct
+            // 
+            this.btnViewProduct.Location = new System.Drawing.Point(403, 379);
+            this.btnViewProduct.Name = "btnViewProduct";
+            this.btnViewProduct.Size = new System.Drawing.Size(75, 23);
+            this.btnViewProduct.TabIndex = 25;
+            this.btnViewProduct.Text = "View product";
+            this.btnViewProduct.UseVisualStyleBackColor = true;
+            this.btnViewProduct.Click += new System.EventHandler(this.btnViewProduct_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(999, 450);
+            this.Controls.Add(this.btnViewProduct);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.lblSearch);
@@ -373,6 +385,7 @@
         private System.Windows.Forms.Label lbl_Inventory;
         private System.Windows.Forms.Label lbl_Date;
         private System.Windows.Forms.Label lbl_Number;
+        private System.Windows.Forms.Button btnViewProduct;
     }
 }
 

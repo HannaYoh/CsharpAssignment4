@@ -56,13 +56,7 @@ namespace ItemsForm
                 item.price = Double.Parse(txt_Price.Text);
                 item.isAvailable = chk_isAvailable.Checked;
                 item.option = groupBox1.Text;
-                SqlConnection con = new SqlConnection(conString);
-                con.Open();
-                MessageBox.Show("connected successfully");
-                string stmt = "insert into product values ('" + item.number + "', '" + item.date + "', '" + item.inventoryNumber + "', '" + item.itemName + "', '" + item.quantity + "', '" + item.price + "' )";
-                SqlCommand comd = new SqlCommand(stmt, con);
-                var result = comd.ExecuteNonQuery();
-                MessageBox.Show(result.ToString());
+               
     }
             catch (Exception ex)
             {
@@ -83,8 +77,7 @@ namespace ItemsForm
             {
                 errorProvider1.Clear();
                 item.save();
-                dt_displayItems.DataSource = null;
-                dt_displayItems.DataSource = Items.getAllProducts();
+                
 
                 String items = " ";
                 foreach(var itemList in chklistcheker.CheckedItems)
@@ -136,6 +129,12 @@ namespace ItemsForm
                 txt_Price.Text = item.price.ToString();
             }
             
+        }
+
+        private void btnViewProduct_Click(object sender, EventArgs e)
+        {
+            dt_displayItems.DataSource = null;
+            dt_displayItems.DataSource = Items.getAllProducts();
         }
     }
 }
